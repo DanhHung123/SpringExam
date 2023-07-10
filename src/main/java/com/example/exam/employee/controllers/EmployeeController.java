@@ -38,4 +38,11 @@ public class EmployeeController {
         employeeReponsitory.save(employee);
         return "redirect:/employee";
     }
+
+    @PostMapping("/search")
+    public String searchEmployee(@RequestParam(value = "search") String search, ModelMap modelMap) {
+        Iterable<Employee> employees = employeeReponsitory.findByEmployeeName(search.trim());
+        modelMap.addAttribute("employees",employees);
+        return "home";
+    }
 }

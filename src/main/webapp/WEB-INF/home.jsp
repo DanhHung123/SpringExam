@@ -31,7 +31,7 @@
             <a class="inline-block py-2 px-4 bg-blue-700 text-white font-medium rounded-md" href="<%=request.getContextPath()%>/employee/create">Create new employee</a>
         </div>
         <div class="w-1/2 flex justify-end">
-            <form class="w-[70%] ">
+            <form class="w-[70%] " action="<%=request.getContextPath()%>/employee/search" method="POST">
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
